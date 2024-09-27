@@ -17,24 +17,24 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<header>
+		<header class="h-20 bg-black">
 			<div class="container max-w-[1200px] mx-auto">
-				<div class="flex-menu">
-					<img
+				<div class="flex-menu flex h-20 w-3/5 float-left items-center text-white font-sans uppercase">
+					<img class="max-w-[140px]"
 						src="https://store.akamai.steamstatic.com/public/shared/images/responsive/header_logo.png"
 						alt=""
 					/>
 					<menu>
-						<li><a href="#">Tienda</a></li>
-						<li><a href="#">Comunidad</a></li>
-						<li><a href="#">Acerce de</a></li>
-						<li><a href="#">Soporte</a></li>
+						<li class="ml-2.5 list-none inline-block"><a class="text-[#e2e8f0] font-semibold no-underline hover:text-[#fff]" href="#">Tienda</a></li>
+						<li class="ml-2.5 list-none inline-block"><a class="text-[#e2e8f0] font-semibold no-underline hover:text-[#fff]" href="#">Comunidad</a></li>
+						<li class="ml-2.5 list-none inline-block"><a class="text-[#e2e8f0] font-semibold no-underline hover:text-[#fff]" href="#">Acerce de</a></li>
+						<li class="ml-2.5 list-none inline-block"><a class="text-[#e2e8f0] font-semibold no-underline hover:text-[#fff]" href="#">Soporte</a></li>
 					</menu>
 				</div>
 			</div>
-			<div class="menu-right">
-				<a href="#" class="btn-download">
-					<svg
+			<div class="menu-right float-left mt-2 w-2/5 text-[#ebe4e4] font-semibold">
+				<a href="#" class="btn-download text-[#fff] bg-[#789806] py-1.5 px-3 font-sans no-underline inline-flex gap-2 items-center hover:bg-[#8caf0c]">
+					<svg class="w-[18px]"
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
 						viewBox="0 0 24 24"
@@ -51,17 +51,19 @@ const { title } = Astro.props;
 					Instalar Steam
 				</a>
 
-				<a href="#">Iniciar Sesión</a>
+				<a class="my-0 mx-1.5 text-[#ebe4e4] no-underline" href="#">Iniciar Sesión</a>
 				|
-				<a href="#">Idioma</a>
+				<a class="my-0 mx-1.5 text-[#ebe4e4] no-underline" href="#">Idioma</a>
 			</div>
 		</header>
-		<div class="banner"></div>
+		<div class="banner bg-[#fb923c] h-[360px]">
+			<video class="h-[360px] w-[100%]" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/clusters/frontpage/84afb9edc1f6cf8b779de9de/webm_page_bg_spanish.webm?t=1727393025"></video>
+		</div>
 
-		<div class="left-menu"></div>
+		<div class="left-menu float-left z-[1] left-[calc(((100%-1200px)/2)-180px)] bg-pink-400 w-[180px] h-[360px] sticky top-0"></div>
 
-		<div class="banner2 container max-w-[1200px] mx-auto"></div>
-		<div class="banner3"></div>
+		<div class="banner2 relative bg-purple-700 h-[260px] container max-w-[1200px] mx-auto"></div>
+		<div class="banner3 h-[1200px] bg-[#5eead4]"></div>
 		<div
 			class="group items-center hover:cursor-pointer duration-300 transition-colors hover:bg-blue-600 rounded py-2 px-4 text-white/80 inline-flex bg-blue-500"
 		>
@@ -105,20 +107,20 @@ const { title } = Astro.props;
 		margin: 0;
 	}
 
-	header {
+	/* header {
 		height: 80px;
 		background: rgb(35, 33, 43);
-	}
+	} */
 
 	/* .container {
 		max-width: 1200px;
 		margin: 0 auto;
 	} */
 
-	.flex-menu img {
+	/* .flex-menu img {
 		width: 140px;
-	}
-	.flex-menu {
+	} */
+	/* .flex-menu {
 		display: flex;
 		height: 80px;
 		width: 60%;
@@ -127,70 +129,70 @@ const { title } = Astro.props;
 		color: #f6f2f2;
 		font-family: sans-serif;
 		text-transform: uppercase;
-	}
+	} */
 
-	.flex-menu a {
+	/* .flex-menu a {
 		color: #d7c9c9;
 		font-weight: 600;
 		text-decoration: none;
-	}
+	} */
 
-	.flex-menu:hover {
+	/* .flex-menu:hover {
 		color: #fff;
-	}
+		hmmmm
+	} */
 
-	.flex-menu li {
+	/* .flex-menu li {
 		margin-left: 10px;
 		list-style: none;
 		display: inline-block;
-	}
+	} */
 
-	.menu-right {
+	/* .menu-right {
 		float: left;
 		margin-top: 8px;
 		width: 40%;
 		color: #ebe4e4;
 		font-family: sans-serif;
-	}
+	} */
 
-	.menu-right a {
+	/* .menu-right a {
 		margin: 0 6px;
 		color: #ebe4e4;
 		text-decoration: none;
-	}
+	} */
 
-	.btn-download {
+	/* .btn-download {
 		color: #fff;
 		background-color: #789806;
-		display: inline-block;
 		pad: 6px 12px;
 		font-family: sans-serif;
 		text-decoration: none;
 		display: inline-flex;
 		gap: 8px;
 		align-items: center;
-	}
+	} */
 
-	.btn-download svg {
+	/* .btn-download svg {
 		width: 18px;
-	}
+	} */
 
-	.btn-download:hover {
+	/* .btn-download:hover {
 		background-color: #8caf0c;
-	}
+	} */
 
-	.banner {
+	/* .banner {
 		background: orange;
 		height: 360px;
-	}
+	} */
 
-	.banner2 {
+	/* .banner2 {
 		position: relative;
 		background: purple;
 		height: 260px;
-	}
+	} */
 
-	.left-menu {
+	/* .left-menu {
 		float: left;
 		z-index: 1;
 		left: calc(((100% - 1200px) / 2) - 180px);
@@ -199,10 +201,10 @@ const { title } = Astro.props;
 		height: 360px;
 		position: sticky;
 		top: 0;
-	}
+	} */
 
-	.banner3 {
+	/* .banner3 {
 		height: 1200px;
-		background-color: turquoise;
-	}
+		background-color: rgb(64, 224, 208);
+	} */
 </style>
